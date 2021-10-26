@@ -8,42 +8,35 @@ const workoutSchema = new Schema({
     default: Date.now,
   },
   exercises: [
-      {
-        type: {
-           type: String,
-        },
-        {
-            name: {
-                type: String,
-            }
-        },
-        {
-            duration: {
-                type: Number
-            }
-        },
-        {
-            weight: {
-                type: Number
-            }
-        },
-        {
-            reps: {
-                type: Number
-            }
-        },
-        {
-            set: {
-                type: Number,
-            }
-        },
-        {
-            distance: {
-                type: Number
-            }
-        }
-    }  
-],
+    {
+      type: {
+        type: String,
+      },
+      name: {
+        type: String,
+      },
+
+      duration: {
+        type: Number,
+      },
+
+      weight: {
+        type: Number,
+      },
+
+      reps: {
+        type: Number,
+      },
+
+      set: {
+        type: Number,
+      },
+
+      distance: {
+        type: Number,
+      },
+    },
+  ],
 });
 
 //method down here for my workout type
