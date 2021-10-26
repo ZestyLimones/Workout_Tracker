@@ -26,15 +26,26 @@ router.put('/api/workouts/:id', (req, res) => {
     {
       new: true,
     }
-  ).then((workoutData) => {
-    res.json(workoutData);
-  });
+  )
+    .then((workoutData) => {
+      res.json(workoutData);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.post('/api/workouts', (req, res) => {
-  Workout.create({}).then((workoutData) => {
-    res.json(workoutData);
-  });
+  Workout.create({})
+    .then((workoutData) => {
+      res.json(workoutData);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
+    });
 });
 
 router.get('/api/workouts/range', (req, res) => {
@@ -51,6 +62,9 @@ router.get('/api/workouts/range', (req, res) => {
     .limit(7)
     .then((workoutData) => {
       res.json(workoutData);
+    })
+    .catch((err) => {
+      res.status(400).json(err);
     });
 });
 
