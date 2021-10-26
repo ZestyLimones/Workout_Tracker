@@ -28,7 +28,7 @@ const workoutSchema = new Schema({
         type: Number,
       },
 
-      set: {
+      sets: {
         type: Number,
       },
 
