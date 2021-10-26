@@ -39,8 +39,6 @@ const workoutSchema = new Schema({
   ],
 });
 
-//method down here for my workout type
-
 const Workout = mongoose.model('Workout', workoutSchema);
 
 module.exports = Workout;
